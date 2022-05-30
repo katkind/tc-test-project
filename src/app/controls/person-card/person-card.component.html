@@ -1,0 +1,23 @@
+<mat-card>
+	<mat-card-header class="mat-card-header">
+		<ng-container *ngIf="person.age && person.name">
+			{{ person.name }},&nbsp;{{ person.age }}
+		</ng-container>
+		<div *ngIf="!person.age || !person.id" class="mat-card-header-text">>
+			{{ person.name }}
+		</div>
+	</mat-card-header>
+	<mat-card-content>
+		<ng-container *ngIf="person.image">
+			<div mat-card-image [ngStyle]="{'background-image': background}"></div>
+		</ng-container>
+		<ng-container *ngIf="!person.image">
+			<div mat-card-image class="defaultImage"></div>
+		</ng-container>
+	</mat-card-content>
+	<mat-card-actions *ngIf="person.id">
+		<mat-icon [@like]="isLiked" svgIcon="favorite"></mat-icon>
+		<button mat-raised-button (click)="like()">Like</button>
+		<button mat-raised-button [hidden]="isLiked" (click)="dislike()">Dislike</button>
+	</mat-card-actions>
+</mat-card>

@@ -1,0 +1,57 @@
+@import "_variables";
+
+app-person-card {
+
+  display: flex;
+  overflow: hidden;
+
+  .mat-card-header {
+    position: absolute;
+    bottom: 6rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    font-size: 16px !important;
+    width: calc(100% - 4rem);
+    box-shadow: 0 1px 3px #000a;
+    background: $app-color;
+    color: #000;
+    text-align: center;
+    margin: 0 1em;
+
+    .mat-card-header-text {
+      margin: 0;
+    }
+  }
+  .mat-card-content>div {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 436px;
+  }
+  .mat-card-image {
+    width: 100%;
+    margin: 0;
+    display: block;
+    overflow: hidden;
+  }
+  .mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    &>.mat-icon {
+      position: absolute;
+      display: block;
+      opacity: 0;
+      z-index: 2;
+      left: 2.5rem;
+    }
+    .mat-raised-button {
+      background-color: $app-color;
+      &[hidden] {
+        display: none;
+      }
+    }
+  }
+
+}

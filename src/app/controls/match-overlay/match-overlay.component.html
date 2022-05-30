@@ -1,0 +1,10 @@
+<mat-card>
+	<mat-card-content>
+		<div [@match]="isMatched" class="match-message">
+			<span>You got match!</span>
+		</div>
+	</mat-card-content>
+	<mat-card-actions>
+		<button mat-raised-button (click)="okay()">Okay</button>
+	</mat-card-actions>
+</mat-card>

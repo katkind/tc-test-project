@@ -1,0 +1,19 @@
+.feed-container {
+  width: 400px;
+  height: 510px;
+  overflow: hidden;
+
+  .mat-list {
+    display: flex;
+    flex-direction: row;
+  }
+  .mat-list-base {
+    padding: 0;
+    .mat-list-item {
+      height: 100%;
+      .mat-list-item-content {
+        padding: 0;
+      }
+    }
+  }
+}

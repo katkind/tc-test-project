@@ -1,0 +1,29 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+main {
+  padding: 1rem;
+}
+button {
+  width: 80px;
+}
+app-person-card .mat-card,
+app-match-overlay .mat-card {
+  width: 400px;
+  height: 500px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+.cdk-overlay-pane {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background: #303030AE;
+  .mat-card {
+    background: rgba(0,0,0,0);
+  }
+}
+

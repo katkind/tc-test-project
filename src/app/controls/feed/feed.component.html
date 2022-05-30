@@ -1,0 +1,22 @@
+<div class="feed-container">
+
+	<mat-list [@slide]="{ value: step, params: {step: (offsetX * step) }}">
+		<ng-container *ngIf="true">
+			<mat-list-item *ngFor="let person of data$ | async">
+				<app-person-card (likePerson)="onLikeHandler($event, person.id)" [person]="person"></app-person-card>
+			</mat-list-item>
+			<mat-list-item>
+				<app-person-card [person]="emptyPerson"></app-person-card>
+			</mat-list-item>
+		</ng-container>
+	</mat-list>
+
+	<ng-template *ngIf="!data$">
+		<div class="no-person-data">No recommendations for you</div>
+	</ng-template>
+
+	<ng-template *ngIf="!auth">
+		<div class="no-person-data">Server are unavailable</div>
+	</ng-template>
+
+</div>
